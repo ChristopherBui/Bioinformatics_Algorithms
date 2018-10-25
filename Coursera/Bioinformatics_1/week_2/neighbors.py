@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-import hamming_distance
+from hamming_distance import hamming_distance_
 
-def neighbors(sequence, distance):
+def neighbors_(sequence, distance):
 
     if distance == 0:
         return [sequence]
@@ -13,10 +13,10 @@ def neighbors(sequence, distance):
         return ['A','T','C','G']
 
     neighbors_set = set()
-    suffix = neighbors(sequence[1:], distance)
+    suffix = neighbors_(sequence[1:], distance)
 
     for i in suffix:
-        if hamming_distance(sequence[1:], i) < distance:
+        if hamming_distance_(sequence[1:], i) < distance:
             for j in ['A','T','C','G']:
                 neighbors_set.add(j + i)
         else:

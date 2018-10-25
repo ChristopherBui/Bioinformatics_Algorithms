@@ -31,3 +31,5 @@ def number_to_pattern(number, klen):
             break
 
     return sequence
+
+print(number_to_pattern(0, 3))
