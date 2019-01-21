@@ -1,5 +1,3 @@
-
-
 def clumpFinding(s,k,L,t):
     out = []
     for start in range(len(s)-L+1):
