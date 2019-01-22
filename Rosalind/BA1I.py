@@ -1,18 +1,8 @@
 # find most frequent k-mer in text such that k-mer is allowed at most d mismatches
 
 from HAMM import hamming_distance
+from BA1M import number_to_pattern
 
-def most_frequent_kmer(string, klen, d):
+def most_freq(string, klen, d):
 
-    kmer_counts = {}
-    most_frequent = []
-
-    start = 0
-    end = klen
-
-    while end <= len(string):
-        kmer = string[start:end]
-
-        if hamming_distance(kmer,
-
-    return most_frequent
+    # how to express all possible kmers
